@@ -17,10 +17,11 @@ $headers = [
 ];
 
 
-$response = $client->patch("https://jsonplaceholder.typicode.com/albums/1",[
+$response = //$client->get("https://jsonplaceholder.typicode.com/posts/101",[
+	$client->post("https://jsonplaceholder.typicode.com/posts",[
 				"headers" => $headers,
 				"body" => $payload,
-			]);
+	]);
 
 
 echo "status_code:". $response->getStatusCode() . "<br/>";
